@@ -7,10 +7,7 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/DigimonPage.vue') },
-      { path: 'digimons', component: () => import('pages/DigimonPage.vue') }
-    ],
+    children: [{ path: '', component: () => import('pages/DigimonPage.vue') }],
   },
 
   // Always leave this as last one,
