@@ -1,8 +1,16 @@
 const routes = [
   {
+    path: '/login',
+    component: () => import('layouts/BlankLayout.vue'),
+    children: [{ path: '', component: () => import('pages/LoginPage.vue') }],
+  },
+  {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/DigimonPage.vue') },
+      { path: 'digimons', component: () => import('pages/DigimonPage.vue') }
+    ],
   },
 
   // Always leave this as last one,
